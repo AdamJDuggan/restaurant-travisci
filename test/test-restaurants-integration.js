@@ -14,6 +14,7 @@ const {app, runServer, closeServer} = require('../server');
 const {TEST_DATABASE_URL} = require('../config');
 
 chai.use(chaiHttp);
+//generate random blogposts with id, title, content, author
 
 // used to put randomish documents in db
 // so we have data to work with and assert about.
@@ -100,7 +101,7 @@ describe('Restaurants API resource', function() {
   });
 
   after(function() {
-    return closeServer();
+    return closeServer();blog
   });
 
   // note the use of nested `describe` blocks.
